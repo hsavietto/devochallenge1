@@ -1,4 +1,4 @@
-package hsavietto.evochallenge1;
+package hsavietto.devochallenge1;
 
 /**
  * A class to check whether strings are palindrome

@@ -1,4 +1,4 @@
-package hsavietto.evochallenge1;
+package hsavietto.devochallenge1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

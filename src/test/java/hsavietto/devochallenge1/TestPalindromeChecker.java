@@ -1,4 +1,4 @@
-package hsavietto.evochallenge1;
+package hsavietto.devochallenge1;
 
 import org.junit.Assert;
 import org.junit.Test;
