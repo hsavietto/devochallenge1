@@ -37,29 +37,19 @@ public class PalindromeChecker {
      * @throws NullPointerException when <pre>value is null</pre>
      */
     public boolean isPalindrome(String value) {
+        if(!caseSensitive) {
+            value = value.toLowerCase();
+        }
+
+        if(ignoreSpaces) {
+            value = value.replace(" ", "");
+        }
+
         int leftCursor = 0;
         int rightCursor = value.length() - 1;
 
         while (leftCursor < rightCursor) {
-            if (ignoreSpaces) {
-                while (leftCursor < rightCursor && value.charAt(leftCursor) == ' ') {
-                    ++leftCursor;
-                }
-
-                while (rightCursor > leftCursor && value.charAt(rightCursor) == ' ') {
-                    --rightCursor;
-                }
-
-                if (rightCursor <= leftCursor) {
-                    return true;
-                }
-            }
-
-            char charAtLeft = value.charAt(leftCursor);
-            char charAtRight = value.charAt(rightCursor);
-
-            if ((caseSensitive && charAtLeft != charAtRight)
-                    || (!caseSensitive && Character.toLowerCase(charAtLeft) != Character.toLowerCase(charAtRight))) {
+            if (value.charAt(leftCursor) != value.charAt(rightCursor)) {
                 return false;
             }
 
