@@ -14,3 +14,10 @@ created at the "target" directory.
 
 To run the demo, execute the command "java -jar <jar_file_name> at the directory where the generated jar
 file is.
+
+* Complexity analysis
+
+The runtime complexity of the used algorithm is O(n). For the cases of case insensistiveness and/or
+whitespaces being ignored, the string is transformed (either to lower case or to have whitespaces removed),
+which implies in the string being copied and more memory needed. In the case of memory constraints, the
+code can be changed to have these evaluations in place, with the cost of code complexity. 
